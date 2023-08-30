@@ -3,6 +3,7 @@ import 'package:flutter_application_1/pages/LoginPage.dart';
 import 'package:flutter_application_1/pages/MyHomePage.dart';
 import 'package:flutter_application_1/pages/NowPlayingPage.dart';
 import 'package:flutter_application_1/pages/PlaylistPage.dart';
+import 'package:page_transition/page_transition.dart';
 
 const ROUTE_HOME = "/home";
 const ROUTE_LOGIN = "/login";
@@ -13,7 +14,12 @@ class MyRouters {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case "/home":
-        return MaterialPageRoute(builder: (_) => const MyHomePage());
+        return PageTransition(
+          child:const MyHomePage(), 
+          type: PageTransitionType.bottomToTop,
+          settings: settings,
+          alignment: Alignment.center
+          );
       case "/login":
         return MaterialPageRoute(builder: (_) => const LoginPage());
       case "/playlist":
