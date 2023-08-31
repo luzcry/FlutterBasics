@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/ListViewAndGridView/MyContainer.dart';
 
 class PlaylistPage extends StatefulWidget {
   @override
@@ -8,13 +9,6 @@ class PlaylistPage extends StatefulWidget {
 class PlaylistPageState extends State<PlaylistPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
-            child: ElevatedButton(
-      child: const Text("NowPlayingPage"),
-      onPressed: () => {
-        Navigator.pop(context)
-      },
-    )));
+    return Scaffold(body: SafeArea(child: MyContainer()));
   }
 }
