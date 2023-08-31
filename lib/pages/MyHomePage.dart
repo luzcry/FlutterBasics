@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Common/HomeArguments.dart';
 import 'package:flutter_application_1/widgets/Appbar.dart';
 import 'package:flutter_application_1/widgets/FloatingActionBtn.dart';
 import 'package:flutter_application_1/widgets/MyIcon.dart';
@@ -9,16 +10,7 @@ import 'package:flutter_application_1/widgets/MyText.dart';
 import 'package:flutter_application_1/widgets/MyButtons.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+   const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -27,10 +19,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
     return Scaffold(
         floatingActionButton: const MyFloatingActionButton(),
         backgroundColor: Colors.pink,
-        appBar: const MyAppbar(),
+        appBar: MyAppbar(homeArguments.title),
         body: SafeArea(
           child: Center(
             child: Column(
@@ -40,15 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   alignment: Alignment.center,
                   height: 600,
                   color: Colors.pink,
-                  child: const Column(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      MyIcon(),
-                      MyText(),
-                      MyImage(),
-                      MyRichText(),
-                      MyButtons(),
+                      Text(homeArguments.message),
+                      const MyIcon(),
+                      const MyText(),
+                      const MyImage(),
+                      const MyRichText(),
+                      const MyButtons(),
                     ],
                   ),
                 ),
