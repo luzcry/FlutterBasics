@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Common/HomeArguments.dart';
-import 'package:flutter_application_1/widgets/Appbar.dart';
-import 'package:flutter_application_1/widgets/FloatingActionBtn.dart';
-import 'package:flutter_application_1/widgets/MyIcon.dart';
-import 'package:flutter_application_1/widgets/MyImage.dart';
+import 'package:flutter_application_1/widgets/Basics/Appbar.dart';
+import 'package:flutter_application_1/widgets/Basics/FloatingActionBtn.dart';
+import 'package:flutter_application_1/widgets/Basics/MyIcon.dart';
+import 'package:flutter_application_1/widgets/Basics/MyImage.dart';
 
-import 'package:flutter_application_1/widgets/MyRichText%20.dart';
-import 'package:flutter_application_1/widgets/MyText.dart';
-import 'package:flutter_application_1/widgets/MyButtons.dart';
+import 'package:flutter_application_1/widgets/Basics/MyRichText%20.dart';
+import 'package:flutter_application_1/widgets/Basics/MyText.dart';
+import 'package:flutter_application_1/widgets/Basics/MyButtons.dart';
 
 class MyHomePage extends StatefulWidget {
-   const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -19,7 +19,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
+    HomeArguments homeArguments =
+        ModalRoute.of(context)!.settings.arguments as HomeArguments;
     return Scaffold(
         floatingActionButton: const MyFloatingActionButton(),
         backgroundColor: Colors.pink,

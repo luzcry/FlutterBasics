@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/AlertDialog.dart';
+import 'package:flutter_application_1/widgets/Basics/AlertDialog.dart';
 
 class MyButtons extends StatelessWidget {
   const MyButtons({super.key});

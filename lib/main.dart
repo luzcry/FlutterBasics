@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: ROUTE_LOGIN,
+      initialRoute: ROUTE_NOW_PLAYING,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blueGrey,
       ),
-      home: const LoginPage(),
     );
   }
 }
