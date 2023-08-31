@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/widgets/Multichild/MyColumn.dart';
+import 'package:flutter_application_1/widgets/Multichild/MyRow.dart';
 
 class NowPlayingPage extends StatefulWidget {
   const NowPlayingPage({super.key});
@@ -14,7 +15,7 @@ class NowPlayingState extends State<NowPlayingPage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: MyColumn(),
+        child: MyRow(),
       ),
     );
   }
