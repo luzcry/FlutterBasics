@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/ListViewAndGridView/MyContainer.dart';
+import 'package:flutter_application_1/widgets/ListViewAndGridView/items/MyCard.dart';
 
 class PlaylistPage extends StatefulWidget {
   @override
@@ -9,6 +9,8 @@ class PlaylistPage extends StatefulWidget {
 class PlaylistPageState extends State<PlaylistPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: MyContainer()));
+    return const Scaffold(
+      body: SafeArea(child: MyCard()),
+    );
   }
 }
